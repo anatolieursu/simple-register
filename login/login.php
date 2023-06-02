@@ -1,5 +1,6 @@
 <?php 
     include('../db.php');
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,6 +38,7 @@
                                     <p class="error">Login Succesfuly!</p>
                                 ';
                                 echo $html . '<br>';
+                                $_SESSION['logged'] = 'logged';
                                 header('Location: ../loginSucc/next.php');
                             } else {
                                 $html = '
